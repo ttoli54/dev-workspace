@@ -1,30 +1,122 @@
-# ³ªÀÇ Ã¹ ¹øÂ° ÀúÀå¼Ò
+# ë‚˜ì˜ ì²« ë²ˆì§¸ ì €ì¥ì†Œ
 
-\# Dev Workspace ÇĞ½À ÀÏÁö
-
-
-
-\## 2026.10.30 - Git \& GitHub Ã¹°ÉÀ½
+\# Dev Workspace í•™ìŠµ ì¼ì§€
 
 
 
-\### ¿À´Ã ¹è¿î °Í
-
-\- PowerShell ±âº» ¸í·É¾î (cd, ls, mkdir)
-
-\- Git ÀúÀå¼Ò ¸¸µé±â (git init)
-
-\- Ä¿¹ÔÇÏ±â (git add ¡æ git commit)
-
-\- GitHub¿¡ ¿Ã¸®±â (git remote ¡æ git push)
+\## 2026.10.30 - Git \& GitHub ì²«ê±¸ìŒ
 
 
 
-\### ±â¾ïÇÒ ÇÙ½É ¸®µë
+\### ì˜¤ëŠ˜ ë°°ìš´ ê²ƒ
+
+\- PowerShell ê¸°ë³¸ ëª…ë ¹ì–´ (cd, ls, mkdir)
+
+\- Git ì €ì¥ì†Œ ë§Œë“¤ê¸° (git init)
+
+\- ì»¤ë°‹í•˜ê¸° (git add â†’ git commit)
+
+\- GitHubì— ì˜¬ë¦¬ê¸° (git remote â†’ git push)
+
+
+
+\### ê¸°ì–µí•  í•µì‹¬ ë¦¬ë“¬
 
 1\. git add .
 
-2\. git commit -m "¸Ş½ÃÁö"
+2\. git commit -m "ë©”ì‹œì§€"
 
 3\. git push
 
+
+\### ëª…ë ¹ì–´ ìˆ˜í–‰ ì‹¤ìŠµ
+
+```
+C:\Users\User> cd deskto
+
+PS C:\Users\User\desktop> cd ttoli54
+
+PS C:\Users\User\desktop\ttoli54> cd..
+
+PS C:\Users\User\desktop> cd ~
+
+PS C:\Users\User>
+
+ C:\Users\User> cd desktop
+PS C:\Users\User\desktop> cd ttoli54
+PS C:\Users\User\desktop\ttoli54> ls
+
+    ë””ë ‰í„°ë¦¬: C:\Users\User\desktop\ttoli54
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----      2026-10-31  ì˜¤í›„ 12:10                docker
+d-----      2026-10-31   ì˜¤í›„ 4:23                terminal
+d-----      2026-10-31   ì˜¤í›„ 4:27                terminal2
+-a----      2026-10-31   ì˜¤í›„ 2:35            227 git ëª…ë ¹ì–´.txt
+
+PS C:\Users\User\desktop\ttoli54>
+
+PS C:\Users\User\desktop\ttoli54> mkdir hi
+
+    ë””ë ‰í„°ë¦¬: C:\Users\User\desktop\ttoli54
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----      2026-10-31   ì˜¤í›„ 4:51                hi
+
+PS C:\Users\User\desktop\ttoli54> ls
+
+    ë””ë ‰í„°ë¦¬: C:\Users\User\desktop\ttoli54
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----      2026-10-31  ì˜¤í›„ 12:10                docker
+d-----      2026-10-31   ì˜¤í›„ 4:51                hi
+d-----      2026-10-31   ì˜¤í›„ 4:23                terminal
+d-----      2026-10-31   ì˜¤í›„ 4:27                terminal2
+-a----      2026-10-31   ì˜¤í›„ 2:35            227 git ëª…ë ¹ì–´.txt
+
+PS C:\Users\User\desktop\ttoli54>
+
+ C:\Users\User\desktop\ttoli54> cd hi
+PS C:\Users\User\desktop\ttoli54\hi> ls
+PS C:\Users\User\desktop\ttoli54\hi> new-item hello.txt
+
+    ë””ë ‰í„°ë¦¬: C:\Users\User\desktop\ttoli54\hi
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2026-10-31   ì˜¤í›„ 4:56              0 hello.txt
+
+ C:\Users\User\desktop\ttoli54\hi> set-content hello.txt "ì–´ë µì§€ë§Œ ì—´ì‹¬íˆ!"
+PS C:\Users\User\desktop\ttoli54\hi> get-content hello.txt
+ì–´ë µì§€ë§Œ ì—´ì‹¬íˆ!
+PS C:\Users\User\desktop\ttoli54\hi>
+
+PS C:\Users\User\desktop\ttoli54\hi> copy-item hello.txt hello-copy.txt
+PS C:\Users\User\desktop\ttoli54\hi> ls
+
+    ë””ë ‰í„°ë¦¬: C:\Users\User\desktop\ttoli54\hi
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2026-10-31   ì˜¤í›„ 5:02             18 hello-copy.txt
+-a----      2026-10-31   ì˜¤í›„ 5:02             18 hello.txt
+
+PS C:\Users\User\desktop\ttoli54\hi> move-item hello-copy.txt backup.txt
+
+PS C:\Users\User\desktop\ttoli54\hi> ls
+
+    ë””ë ‰í„°ë¦¬: C:\Users\User\desktop\ttoli54\hi
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2026-10-31   ì˜¤í›„ 5:02             18 backup.txt
+-a----      2026-10-31   ì˜¤í›„ 5:02             18 hello.txt
+
+PS C:\Users\User\desktop\ttoli54\hi> git init
+Initialized empty Git repository in C:/Users/User/Desktop/ttoli54/hi/.git/
+PS C:\Users\User\desktop\ttoli54\hi> git add
+
+```
