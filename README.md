@@ -32,7 +32,7 @@
 \### 명령어 수행 실습
 
 ```
-C:\Users\User> cd deskto
+C:\Users\User> cd desktop
 
 PS C:\Users\User\desktop> cd ttoli54
 
